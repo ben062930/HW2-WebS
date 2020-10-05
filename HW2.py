@@ -1,10 +1,12 @@
 import bs4 as bs4
 import requests
 
+
 def webScraper():
     # write into txt file:
     with open('D:/pycharm/New project/FE595HW2/companies.txt', "wt") as f:
         for i in range(0,50):
+            try:
                 times = i+1
                 print(times, file=f)    # print the times into file
                 # make a request
@@ -20,8 +22,8 @@ def webScraper():
                         print(content, file=f)   # print name into file
                     if b in content:
                         print(content, file=f)   # print purpose into file
+            except:
+                print("error", file=f)
 
 if __name__ == "__main__":
     webScraper()
-
-
