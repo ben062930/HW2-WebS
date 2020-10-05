@@ -1,6 +1,6 @@
 import bs4 as bs4
 import requests
-
+import time
 
 def webScraper():
     # write into txt file:
@@ -22,6 +22,7 @@ def webScraper():
                         print(content, file=f)   # print name into file
                     if b in content:
                         print(content, file=f)   # print purpose into file
+                 time.sleep(0.5)
             except:
                 print("error", file=f)
 
