@@ -18,6 +18,7 @@ def webScraper():
                     content = text.getText()
                     a = 'Name'    # get name
                     b = 'Purpose'  # get purpose
+                    #can make a&b be variables out of the for loop
                     if a in content:
                         print(content, file=f)   # print name into file
                     if b in content:
